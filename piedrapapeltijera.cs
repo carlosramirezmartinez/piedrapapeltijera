@@ -12,7 +12,7 @@ namespace piedrapapeltijera
 	{
 		static void Main(string[] args)
 		{
-            UniEnable();// method for enabling Unicode (Emoji)
+            UniEnable();
             int jugador = Convert.ToInt32(Console.ReadLine()); 
             int computer = JugarCpu();
             Console.WriteLine("Bienvenido");
@@ -20,7 +20,6 @@ namespace piedrapapeltijera
             Console.WriteLine("La CPU eligió: " + NumToStr(computer));
             string resu = CompararResultado(jugador, computer);
             Console.WriteLine($"El resultado es: {resu}");
-			//Console.WriteLine("Hola mundo!");
 		}
 
         //imprimir numero a emoji
@@ -44,7 +43,6 @@ namespace piedrapapeltijera
         public static void UniEnable() {
           Console.OutputEncoding = System.Text.Encoding.UTF8;
           Console.Write("\xfeff"); 
-          // bom = byte order mark
         }
 
         //jugadacpu
